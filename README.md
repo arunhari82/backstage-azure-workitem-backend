@@ -147,4 +147,4 @@ This plugin requires the following configuration at root level as defined in `co
                 - ${AZURE_ORG_NAME}  
 ```         
 
-### Restart the devhub pod to see this plugin as a menu item
+### Proceed to configure the frontend plugin for this (https://github.com/arunhari82/backstage-plugin-azure-workitem-dynamic.git)
