@@ -1,0 +1,15 @@
+app:
+  baseUrl: http://localhost:3000
+backend:
+  baseUrl: http://localhost:7007
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
+integrations:
+  azure:
+    - host: dev.azure.com
+      credentials:
+      - personalAccessToken: ${AZURE_PERSONAL_ACCESS_TOKEN}
+        organizations:
+          - ${AZURE_ORG_NAME}
