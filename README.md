@@ -42,8 +42,10 @@ This backend plugin pulls data from Azure Boards. The corresponding front end pl
 
    Personal access token should have the following previleges
 
-   Task Groups : Read,Write & Manage
-   WorkItems: Read,write & Manage
+   ```
+        Task Groups : Read,Write & Manage
+        WorkItems: Read,write & Manage
+   ```     
 
 ## Run Locally to test
 
@@ -136,7 +138,13 @@ Add the following section to the dynamic plugin configmap
 This plugin requires the following configuration at root level as defined in `config.d.ts` file
 
 ```
-    
+    integrations:
+      azure:
+        - host: dev.azure.com
+            credentials:
+            - personalAccessToken: ${AZURE_PERSONAL_ACCESS_TOKEN}
+                organizations:
+                - ${AZURE_ORG_NAME}  
 ```         
 
 ### Restart the devhub pod to see this plugin as a menu item
